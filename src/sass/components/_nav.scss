@@ -1,0 +1,13 @@
+.nav{
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    li{
+      padding-left: 113px;
+        &:nth-child(1){
+          padding-left: 0;
+        }
+    }
+}

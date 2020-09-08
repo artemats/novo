@@ -1,0 +1,27 @@
+.regular{
+  font-family: "Verdana-Regular";
+}
+
+.bold{
+  font-family: "Verdana-Bold";
+}
+
+.title-1{
+  @extend h1;
+}
+
+.title-2{
+  @extend h2;
+}
+
+.title-3{
+  @extend h3;
+}
+
+.title-4{
+  @extend h4;
+}
+
+.title-5{
+  @extend h5;
+}

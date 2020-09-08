@@ -1,0 +1,32 @@
+.header{
+  position: relative;
+  background-color: $white;
+  padding: 16px 0;
+    &-logo{
+        &-box{
+          max-width: 89px;
+          display: inline-block;
+          position: relative;
+          margin-left: -10px;
+        }
+        &-label{
+          position: absolute;
+          font-size: 10px;
+          text-transform: uppercase;
+          right: calc(100% + 9px);
+          top: 50%;
+          transform: translateY(-50%);
+          white-space: nowrap;
+        }
+        &-partner{
+          position: absolute;
+          left: calc(100% + 10px);
+          top: 55%;
+          transform: translateY(-50%);
+          max-width: 47px;
+        }
+    }
+    &-nav{
+      padding: 15px 0;
+    }
+}
