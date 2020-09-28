@@ -8,11 +8,32 @@
 // LIBS //
 @import "../libs/grid.min.css";
 @import "../libs/slick.css";
+@import "../libs/magnific-popup.css";
+@import "../libs/datepicker.min.css";
 
 // PAGES //
 @import "pages/home/hero";
+@import "pages/home/about";
+@import "pages/home/science";
+@import "pages/home/start";
+@import "pages/home/reviews";
+@import "pages/home/partners";
+@import "pages/how-it-works/hero";
+@import "pages/how-it-works/steps";
+@import "pages/how-it-works/diet";
+@import "pages/how-it-works/result";
+@import "pages/how-it-works/partners";
+@import "pages/pricing/hero";
+@import "pages/pricing/pricing";
+@import "pages/consultation/consultation";
 
 // COMPONENTS //
 @import "components/header";
+@import "components/footer";
 @import "components/nav";
+@import "components/slick-settings";
+@import "components/today";
+@import "components/subscribe";
+@import "components/input";
+@import "components/popup";
 @import "components/general";

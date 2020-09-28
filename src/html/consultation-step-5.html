@@ -1,0 +1,75 @@
+//= components/_head.html
+<section class="section consultation-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="consultation-nav-list">
+          <a href="consultation-step-1.html" class="link link-sm"><span class="link-num"></span>General information</a>
+          <a href="consultation-step-2.html" class="link link-sm"><span class="link-num"></span>Account Creation</a>
+          <a href="consultation-step-3.html" class="link link-sm"><span class="link-num"></span>Password confirmation</a>
+          <a href="consultation-step-4.html" class="link link-sm"><span class="link-num"></span>Health status</a>
+          <a href="consultation-step-5.html" class="link link-sm active"><span class="link-num"></span>Credit card pay</a>
+          <a href="consultation-step-6.html" class="link link-sm"><span class="link-num"></span>Pay confirm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section consultation">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-2 col-md-10 offset-md-1">
+        <div class="consultation-box">
+          <h4 class="title-4">Payment Information</h4>
+          <p>We will reserve your first month’s bill on your credit card upon checkout. However you will <a
+            href="#">not be billed</a> if your physician does not approve you for the programme. Recurring monthly billing will start from the date your medication has been sent, and can be turned off any time in your account settings.</p>
+          <div class="consultation-box-image">
+            <img src="../images/payments.png" alt="" />
+          </div>
+          <label class="input-container __payment" data-currency="$">
+            <span class="input-label">Payment  amount</span>
+            <input type="number" class="input" value="100.00" readonly />
+            <button class="btn btn-edit" id="toggle-value">Edit</button>
+          </label>
+          <label class="input-container">
+            <span class="input-label">Name on card</span>
+            <input type="text" class="input" placeholder="Your name" />
+          </label>
+          <label class="input-container __card">
+            <span class="input-label">Number of card</span>
+            <input type="text" class="input" placeholder="XXXX XXXX XXXX XXXX" />
+            <span class="input-label-icon">
+              <img src="../images/visa.svg" alt="Visa" />
+            </span>
+          </label>
+          <div class="input-container-box">
+            <label class="input-container">
+              <span class="input-label">Expiry date</span>
+              <input type="text" class="input" placeholder="XX/XX" />
+            </label>
+            <label class="input-container">
+              <span class="input-label">Security code</span>
+              <input type="text" class="input" placeholder="XXX" />
+              <span class="input-help">
+                ?
+                <span class="input-help-info">This is secure code</span>
+              </span>
+            </label>
+          </div>
+          <label class="input-container">
+            <span class="input-label">ZIP / Postal code</span>
+            <input type="text" class="input" placeholder="XXXXX" />
+            <span class="input-help">
+                ?
+                <span class="input-help-info">For example 90120</span>
+              </span>
+          </label>
+          <div class="consultation-box-action">
+            <a href="consultation-step-6.html" class="btn">Confirm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+//= components/_scripts.html

@@ -1,0 +1,30 @@
+.science{
+  padding: 184px 0 192px;
+    &-title{
+      margin-bottom: 66px;
+        @include d(991){
+          margin-bottom: 20px;
+          margin-top: 40px;
+        }
+    }
+    .video{
+      height: 474px;
+        @include d(991){
+          height: 50vw;
+        }
+        @include d(480){
+          height: 65vw;
+          width: 100vw;
+          margin: 0 -30px;
+        }
+    }
+    @include d(1200){
+      padding: 155px 0;
+    }
+    @include d(991){
+      padding: 120px 0;
+    }
+    @include d(480){
+      padding: 90px 0;
+    }
+}

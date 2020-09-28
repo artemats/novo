@@ -1,0 +1,31 @@
+.hero{
+    &-default{
+      min-height: 0;
+      background-color: $grey-light;
+      padding: 103px 0 50px;
+        .hero{
+            &-content{
+              margin-right: 0;
+              text-align: center;
+                &-title{
+                  text-transform: none;
+                  margin-bottom: 35px;
+                }
+                &-description{
+                  font-size: 16px;
+                  max-width: 700px;
+                  margin: 0 auto;
+                }
+            }
+        }
+        @include d(1200){
+          min-height: 0;
+        }
+        @include d(991){
+          min-height: 0;
+        }
+        @include d(767){
+          min-height: 0;
+        }
+    }
+}

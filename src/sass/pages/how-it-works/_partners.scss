@@ -1,0 +1,101 @@
+.partners{
+    &-hiw{
+      background-color: transparent;
+      text-align: left;
+      padding: 147px 0 300px;
+        .partners{
+            &-list{
+              padding: 135px 0 128px;
+                &-box{
+                  height: 120px;
+                  justify-content: flex-start;
+                    img{
+                      max-width: 270px;
+                        @include d(1600){
+                          max-width: 250px;
+                        }
+                        @include d(1440){
+                          max-width: 210px;
+                        }
+                        @include d(1200){
+                          max-width: 190px;
+                        }
+                        @include d(991){
+                          max-width: 150px;
+                        }
+                    }
+                    @include d(1600){
+                      height: 140px;
+                    }
+                    @include d(1440){
+                      height: 120px;
+                    }
+                    @include d(1200){
+                      height: 100px;
+                    }
+                    @include d(991){
+                      height: 80px;
+                    }
+                    @include d(767){
+                      margin-right: 30px;
+                    }
+                }
+                @include d(575){
+                  padding: 90px 0;
+                }
+                @include d(991){
+                  padding: 100px 0 20px;
+                  margin: 0;
+                }
+                @include d(575){
+                  padding: 90px 0 30px;
+                }
+            }
+        }
+    }
+    &-title{
+      position: relative;
+      font-size: 20px;
+      color: $blue;
+      letter-spacing: .05em;
+      padding-bottom: 14px;
+      margin-bottom: 35px;
+      margin-top: 120px;
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: $blue;
+          max-width: 370px;
+          width: 100%;
+          opacity: .7;
+        }
+        @include d(991){
+          margin-top: 20px;
+        }
+    }
+    &-description{
+        @include m(992){
+          padding-right: 30px;
+        }
+        @include d(991){
+          margin-bottom: 40px;
+        }
+        p{
+            a{
+              text-decoration: underline;
+            }
+        }
+    }
+    @include d(1440){
+      padding: 90px 0 120px;
+    }
+    @include d(991){
+      padding: 90px 0;
+    }
+    @include d(480){
+      padding: 80px 0 50px;
+    }
+}

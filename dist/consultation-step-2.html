@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+  <title>Novo Nordisk</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="theme-color" content="#005AD2">
+  <meta name="msapplication-navbutton-color" content="#005AD2">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#005AD2">
+
+  <link rel="preload" href="fonts/Verdana-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Bold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <style>#wrapper.is-loading .consultation-nav{opacity: 0;transform: translateY(-10px);}#wrapper.is-loading .consultation{opacity: 0;}</style>
+
+  <link rel="prefetch" href="css/styles.min.css" as="style">
+  <link rel="prefetch" href="js/scripts.min.js" as="script">
+
+  <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+<body>
+
+<div id="wrapper" class="is-loading">
+<section class="section consultation-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="consultation-nav-list">
+          <a href="consultation-step-1.html" class="link link-sm"><span class="link-num"></span>General information</a>
+          <a href="consultation-step-2.html" class="link link-sm active"><span class="link-num"></span>Account Creation</a>
+          <a href="consultation-step-3.html" class="link link-sm"><span class="link-num"></span>Password confirmation</a>
+          <a href="consultation-step-4.html" class="link link-sm"><span class="link-num"></span>Health status</a>
+          <a href="consultation-step-5.html" class="link link-sm"><span class="link-num"></span>Credit card pay</a>
+          <a href="consultation-step-6.html" class="link link-sm"><span class="link-num"></span>Pay confirm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section consultation">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="consultation-box">
+          <h4 class="title-4">Account Creation</h4>
+          <p>We will send your information to a a trusted physician who will review your eligibility. Please make an account so we can contact you when it’s been reviewed. You can also check the status of your case in your account overview.</p>
+          <br>
+          <br>
+          <label class="input-container">
+            <span class="input-label">Email address</span>
+            <input type="text" class="input" placeholder="Email">
+          </label>
+          <label class="input-container">
+            <span class="input-label">Create password</span>
+            <input type="password" class="input" placeholder="Password">
+          </label>
+          <div class="input-container">
+            <label class="radio-box-item">
+              <input type="checkbox" value="Agree" class="input-checkbox" id="agree">
+              <span class="input-checkbox-icon"></span>
+              <span class="input-radio-title">I Agree to the <a href="#">user terms</a>, <a href="#">service terms</a> and <a href="#">privacy policy</a></span>
+            </label>
+          </div>
+          <div class="consultation-box-action">
+            <a href="consultation-step-3.html" class="btn disabled">Next</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<script src="js/scripts.min.js"></script>
+<script src="js/svg4everybody.min.js"></script>
+<script>
+    svg4everybody();
+</script>
+
+</body>
+</html>

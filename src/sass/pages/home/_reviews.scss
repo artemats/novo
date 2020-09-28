@@ -1,0 +1,67 @@
+.reviews{
+  padding: 106px 0 112px;
+    @include d(991){
+      padding: 100px 0;
+    }
+    @include d(480){
+      padding: 80px 0;
+    }
+}
+
+.review{
+  text-align: center;
+  margin-bottom: 140px;
+    &-avatar{
+      width: 190px;
+      height: 190px;
+      overflow: hidden;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto 17px;
+        img{
+          position: absolute;
+          object-fit: cover;
+          object-position: center;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: auto;
+          max-width: none;
+          height: 100%;
+        }
+        @include d(1440){
+          width: 150px;
+          height: 150px;
+        }
+    }
+    &-description{
+      max-width: 1200px;
+      margin: 26px auto 0;
+        @include d(480){
+          margin: 10px auto 0;
+        }
+    }
+    &-position{
+      margin-top: -7px;
+    }
+    &-author{
+        @include d(480){
+          margin-bottom: 20px;
+            p{
+              line-height: 1.2em;
+            }
+        }
+    }
+    @include d(1500){
+      padding: 0 80px;
+    }
+    @include d(991){
+      margin-bottom: 70px;
+    }
+    @include d(767){
+      padding: 0 40px;
+    }
+    @include d(480){
+      padding: 0 10px;
+    }
+}

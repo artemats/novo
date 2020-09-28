@@ -1,0 +1,42 @@
+.partners{
+  background-color: $grey-light;
+  padding: 103px 0;
+  text-align: center;
+    &-list{
+      padding: 85px 0 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        &-box{
+          flex: 1;
+          height: 77px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+            img{
+              max-width: 137px;
+            }
+            @include d(991){
+              height: 60px;
+            }
+            @include d(767){
+              width: 150px;
+              flex: none;
+            }
+        }
+        @include d(991){
+          margin-left: -6vw;
+          margin-right: -6vw;
+        }
+        @include d(767){
+          white-space: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+          justify-content: flex-start;
+        }
+    }
+    @include d(480){
+      padding: 80px 0;
+    }
+}

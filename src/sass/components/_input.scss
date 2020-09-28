@@ -1,0 +1,417 @@
+.input{
+  height: 61px;
+  border-radius: 6px;
+  border: 1px #747474 solid;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.08);
+  font-size: 16px;
+  @extend .regular;
+  padding: 0 15px;
+  color: $blue-dark;
+  width: 100%;
+  transition: border-color .2s ease;
+    &::-webkit-input-placeholder {
+      opacity: .29;
+    }
+    &::-moz-placeholder {
+      opacity: .29;
+    }
+    &:-ms-input-placeholder {
+      opacity: .29;
+    }
+    &:-moz-placeholder {
+      opacity: .29;
+    }
+    &:focus{
+      outline: none;
+    }
+    @include d(1200){
+      height: 55px;
+    }
+    @include d(991){
+      height: 51px;
+    }
+    @include d(575){
+      font-size: 14px;
+    }
+    &-container{
+      position: relative;
+      display: block;
+        &-title{
+          p{
+            margin: 0;
+          }
+        }
+        &-box{
+          display: flex;
+            .input-container:not(:last-child){
+                .input{
+                  border-right: none;
+                }
+            }
+            .input-container{
+              flex: 1;
+                .input{
+                  border-radius: 0;
+                }
+                &:nth-child(1){
+                  .input{
+                    border-radius: 6px 0 0 6px;
+                  }
+                }
+                &:last-child{
+                  .input{
+                    border-radius: 0 6px 6px 0;
+                  }
+                }
+            }
+        }
+        &.__payment{
+          padding-right: 100px;
+            &:before{
+              content: attr(data-currency);
+              position: absolute;
+              bottom: 54px;
+              left: 0;
+              font-size: 48px;
+              color: $blue;
+                @include d(480){
+                  font-size: 26px;
+                  bottom: 42px;
+                }
+            }
+            .input{
+              border-color: transparent;
+              box-shadow: none;
+              font-size: 48px;
+              color: $blue;
+              padding: 0 30px;
+              height: 82px;
+                @include d(480){
+                  font-size: 26px;
+                  height: 54px;
+                  padding: 0 15px;
+                }
+            }
+            .btn-edit{
+              position: absolute;
+              top: 62px;
+              right: 10px;
+              width: auto;
+              color: $blue-dark;
+              font-size: 12px;
+              letter-spacing: 0;
+              @extend .regular;
+                @include hover(991){
+                  &:hover{
+                    color: $white;
+                  }
+                }
+                @include d(480){
+                  top: 35px;
+                }
+            }
+            &.__readonly{
+              .input{
+                border-color: #747474;
+              }
+            }
+        }
+        &.__card{
+            .input{
+              padding-right: 100px;
+                @include d(480){
+                  padding-right: 70px;
+                }
+            }
+        }
+        &.is-error{
+          .input{
+            border-color: tomato;
+          }
+        }
+    }
+    &-label{
+      display: inline-block;
+      color: $blue-dark;
+      margin-bottom: 25px;
+        &-icon{
+          position: absolute;
+          width: 95px;
+          height: 43px;
+          bottom: 49px;
+          right: 8px;
+          background-color: $white;
+          border-radius: 6px;
+          border: 1px $blue-dark solid;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+            img{
+              max-width: 80%;
+              max-height: 80%;
+            }
+            @include d(1200){
+              bottom: 46px;
+              right: 6px;
+            }
+            @include d(991){
+              bottom: 45px;
+              height: 41px;
+            }
+            @include d(480){
+              width: 60px;
+              height: 31px;
+              bottom: 40px;
+            }
+        }
+        @include d(480){
+          margin-bottom: 15px;
+        }
+    }
+    &-radio{
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+        &-title{
+          padding-left: 50px;
+          display: inline-block;
+          line-height: 1.4em;
+          position: relative;
+            a{
+              @extend .bold;
+              text-decoration: underline;
+            }
+            @include d(575){
+              padding-left: 40px;
+            }
+        }
+        &-icon{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 3px #A6B5E0 solid;
+            &:before{
+              content: '';
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              top: 4px;
+              left: 4px;
+              background-color: $blue;
+              border-radius: 50%;
+              opacity: 0;
+              transition: opacity .2s ease;
+            }
+            @include d(575){
+              width: 26px;
+              height: 26px;
+              top: 1px;
+                &:before{
+                  width: 14px;
+                  height: 14px;
+                  top: 3px;
+                  left: 3px;
+                }
+            }
+        }
+        &:checked{
+            & ~ .input-radio-icon{
+              &:before{
+                opacity: 1;
+              }
+            }
+        }
+    }
+    &-checkbox{
+      @extend .input-radio;
+        &-icon{
+          @extend .input-radio-icon;
+          border-radius: 0;
+            &:before{
+              width: 20px;
+              height: 16px;
+              background-color: transparent;
+              border-radius: 0;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              background-image: url(../../images/icons/check.svg);
+            }
+            @include d(575){
+              &:before{
+                top: 3px;
+                left: 2px;
+                width: 18px;
+                height: 14px;
+              }
+            }
+        }
+        &-bg{
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          right: 5px;
+          bottom: 5px;
+          border-radius: 6px;
+          background-color: #F5F5F5;
+          opacity: 0;
+          transition: opacity .2s ease;
+        }
+        &:checked{
+            & ~ .input-checkbox-bg{
+              opacity: 1;
+            }
+        }
+    }
+    &-help{
+      position: absolute;
+      background-color: $orange;
+      border-radius: 50%;
+      color: $white;
+      line-height: 35px;
+      width: 35px;
+      height: 35px;
+      right: 14px;
+      bottom: 54px;
+      text-align: center;
+      @extend .bold;
+        &-info{
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background-color: $orange;
+          text-align: left;
+          line-height: 1.4em;
+          @extend .regular;
+          font-size: 14px;
+          padding: 20px;
+          max-width: 300px;
+          width: 100vw;
+          border-radius: 6px;
+          opacity: 0;
+          transform: translateY(2px);
+          transition: opacity .4s ease,  transform .4s ease;
+        }
+        &:hover{
+            .input-help-info{
+              opacity: 1;
+              transform: translateY(0);
+            }
+        }
+        @include d(1200){
+          bottom: 50px;
+        }
+        @include d(991){
+          bottom: 48px;
+        }
+        @include d(480){
+          bottom: 38px;
+          right: 5px;
+        }
+    }
+    &-icon{
+      position: absolute;
+      bottom: 58px;
+      right: 20px;
+      width: 25px;
+      height: 25px;
+        @include d(1200){
+          bottom: 55px;
+          right: 16px;
+        }
+        @include d(991){
+          bottom: 53px;
+        }
+        @include d(480){
+          bottom: 43px;
+          right: 12px;
+        }
+    }
+}
+
+.textarea{
+  @extend .input;
+  height: 267px;
+  padding: 20px 15px;
+    @include d(1200){
+      height: 230px;
+    }
+    @include d(991){
+      height: 200px;
+    }
+}
+
+.radio{
+    &-box{
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+        &-item{
+          position: relative;
+          line-height: 28px;
+          cursor: pointer;
+          padding-bottom: 24px;
+            &.__thumb{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 20px;
+              min-height: 178px;
+                .input-radio{
+                  text-align: center;
+                    &-icon{
+                      width: 80px;
+                      height: 80px;
+                      border: none;
+                      position: relative;
+                      display: flex;
+                      align-items: flex-end;
+                      justify-content: center;
+                      margin-bottom: 10px;
+                        &:before{
+                          display: none;
+                        }
+                        @include d(575){
+                          width: 60px;
+                          height: 60px;
+                        }
+                    }
+                    &-title{
+                      padding-left: 0;
+                      max-width: 190px;
+                      margin: 0 auto;
+                      color: $blue;
+                      font-size: 20px;
+                      text-align: center;
+                      line-height: 1.2em;
+                        @include d(767){
+                          font-size: 18px;
+                        }
+                        @include d(575){
+                          font-size: 16px;
+                        }
+                    }
+                }
+                @include d(575){
+                  min-height: 150px;
+                }
+            }
+            @include d(480){
+              width: 100%;
+              padding-bottom: 15px;
+            }
+        }
+        .radio-box-item{
+          width: 50%;
+        }
+    }
+}
+
+[data-view="month current"]{
+  padding-top: 5px !important;
+}

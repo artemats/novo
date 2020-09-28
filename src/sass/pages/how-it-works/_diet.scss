@@ -1,0 +1,15 @@
+.diet{
+  padding: 152px 0 187px;
+    &-title{
+      margin-bottom: 36px;
+        @include d(991){
+          margin-top: 20px;
+        }
+    }
+    @include d(1300){
+      padding: 120px 0;
+    }
+    @include d(767){
+      padding: 90px 0;
+    }
+}

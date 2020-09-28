@@ -1,0 +1,138 @@
+.pricing{
+  padding: 46px 0 135px;
+  background-color: $grey-light;
+    &-carousel{
+        &-slide{
+          padding: 0 7px;
+            @include m(992){
+              width: 33.33%;
+            }
+            @include d(991){
+              width: 40vw;
+            }
+            @include d(767){
+              width: 290px;
+              padding: 0 3px;
+            }
+        }
+        @include m(992){
+          display: flex;
+          margin: 0 -7px;
+        }
+        @include d(1200){
+          margin: 0 -55px;
+        }
+        @include d(991){
+          margin-right: 0;
+          width: calc(100vw + 12vw);
+          margin-left: -12vw;
+        }
+        @include d(767){
+          width: 100vw;
+          margin-left: -30px;
+        }
+    }
+    &-box{
+      background-color: $white;
+      max-width: 470px;
+      border-radius: 6px;
+      overflow: hidden;
+      padding: 0 0 25px;
+        &-header{
+          background-color: #EFEFEF;
+          border-radius: 6px;
+          padding: 10px 37px;
+            @include d(767){
+              padding: 5px 20px;
+            }
+        }
+        &-title{
+          font-size: 20px;
+          color: $blue;
+          padding: 32px 63px;
+            p{
+              line-height: 1.25em;
+            }
+            @include d(1440){
+              padding: 32px 30px;
+            }
+            @include d(767){
+              font-size: 18px;
+              padding: 20px;
+            }
+        }
+        &-list{
+          padding: 0 40px 0 58px;
+            li{
+              position: relative;
+              padding-left: 32px;
+              margin-bottom: 33px;
+                &:before{
+                  content: '';
+                  position: absolute;
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background-color: $orange;
+                  top: 9px;
+                  left: 0;
+                }
+                @include d(991){
+                  &:before{
+                    top: 8px;
+                  }
+                }
+                @include d(767){
+                  padding-left: 25px;
+                  margin-bottom: 20px;
+                    &:before{
+                      width: 8px;
+                      height: 8px;
+                      top: 9px;
+                    }
+                }
+            }
+            @include d(1440){
+              padding: 0 30px;
+            }
+            @include d(767){
+              padding: 0 15px;
+            }
+        }
+        &-action{
+          padding: 56px 35px 10px;
+            .btn{
+              max-width: 100%;
+              font-size: 10px;
+              color: $white;
+              letter-spacing: .06em;
+            }
+        }
+    }
+}
+
+.price{
+    &-value{
+      font-size: 48px;
+      @extend .bold;
+      color: $blue;
+      letter-spacing: -.02em;
+        &-label{
+          font-size: 36px;
+          margin-right: 12px;
+            @include d(1440){
+              font-size: 26px;
+              margin-right: 8px;
+            }
+        }
+        &-lip{
+          font-size: 24px;
+            @include d(1440){
+              font-size: 20px;
+            }
+        }
+        @include d(1440){
+          font-size: 30px;
+        }
+    }
+}

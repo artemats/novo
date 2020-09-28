@@ -1,0 +1,149 @@
+.result{
+  background-color: $grey-light;
+  padding: 150px 0 65px;
+    &-title{
+      position: relative;
+      padding-right: 250px;
+        @include d(480){
+          padding-right: 0;
+        }
+    }
+    &-carousel{
+      padding: 102px 0 50px;
+      width: 100vw;
+        &-slide{
+          padding-right: 42px;
+          opacity: 0;
+          transition: opacity .4s ease;
+            &.slick-current{
+              opacity: 1;
+                & ~ .result-carousel-slide{
+                  opacity: 1;
+                }
+            }
+            @include d(1200){
+              padding-right: 30px;
+            }
+            @include d(480){
+              padding-right: 10px;
+            }
+        }
+        @include d(991){
+          padding: 60px 0 40px;
+        }
+        @include d(480){
+          padding: 70px 0 40px;
+        }
+    }
+    &-box{
+      position: relative;
+      background-color: $white;
+      max-width: 428px;
+      padding: 60px 0 80px 57px;
+        &:before{
+          content: attr(data-num);
+          position: absolute;
+          top: 45px;
+          right: 60px;
+          font-size: 48px;
+          @extend .bold;
+          color: $blue;
+        }
+        &-icon{
+          height: 74px;
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 20px;
+            @include d(1200){
+              height: 54px;
+            }
+        }
+        &-title{
+          font-size: 20px;
+          color: $blue;
+          position: relative;
+          padding: 0 40px 20px 0;
+          letter-spacing: .05em;
+            &:before{
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 1px;
+              background-color: $blue;
+              opacity: .2;
+            }
+            @include d(575){
+                p{
+                  line-height: 1.4em;
+                }
+            }
+        }
+        &-description{
+          padding: 25px 70px 25px 0;
+            @include d(575){
+              padding: 25px 25px 25px 0;
+            }
+        }
+        @include d(1600){
+            &:before{
+              font-size: 42px;
+            }
+        }
+        @include d(1440){
+          max-width: 410px;
+          padding: 60px 0 40px 50px;
+            &:before{
+              font-size: 36px;
+            }
+        }
+        @include d(1200){
+          max-width: 380px;
+          padding: 50px 0 40px 50px;
+            &:before{
+              font-size: 32px;
+              top: 35px;
+              right: 40px;
+            }
+        }
+        @include d(767){
+          max-width: 340px;
+        }
+        @include d(480){
+          max-width: 80vw;
+          padding: 35px 0 20px 35px;
+        }
+    }
+    .carousel-nav{
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 225px;
+      width: 100vw;
+      z-index: 1;
+        .slick-arrow{
+          position: relative;
+          top: 0;
+        }
+        @include d(991){
+          max-width: 160px;
+        }
+        @include d(575){
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        @include d(480){
+          top: auto;
+          transform: translateY(0);
+          bottom: -50px;
+          max-width: 120px;
+        }
+    }
+    @include d(767){
+      padding: 90px 0 60px;
+    }
+}

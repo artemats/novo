@@ -1,0 +1,53 @@
+.popup{
+  display: none;
+  background-color: $white;
+  border-radius: 6px;
+  max-width: 658px;
+  margin: 20px auto;
+  position: relative;
+    &-box{
+      padding: 50px 90px;
+        &-title{
+          padding: 10px 0 5px;
+        }
+        &-description{
+          padding: 10px 0 50px;
+          //max-width: 350px;
+        }
+        &-action{
+          margin-top: 40px;
+            .btn{
+              max-width: 100%;
+              font-size: 10px;
+              color: $white;
+              letter-spacing: .06em;
+            }
+            @include d(480){
+              margin-top: 20px;
+            }
+        }
+        @include d(767){
+          padding: 40px 60px;
+        }
+        @include d(575){
+          padding: 30px;
+        }
+    }
+    .input-container{
+      padding-bottom: 30px;
+        @include d(480){
+          padding-bottom: 20px;
+        }
+    }
+}
+
+.mfp{
+    &-content {
+        .popup {
+          display: block;
+        }
+    }
+    &-bg{
+      opacity: .4;
+    }
+}

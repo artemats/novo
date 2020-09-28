@@ -122,7 +122,7 @@ function moveHtml() {
 
 function svg() {
 
-    return src('src/img/icons/*')
+    return src('src/images/icons/*')
         .pipe(svgSprite({
             mode: {
                 stack: {
@@ -145,8 +145,12 @@ function svg() {
             }
         }))
         .pipe(replace('&gt;', '>'))
-        .pipe(dest('src/img/'))
+        .pipe(dest('src/images/'))
 
+}
+
+function moveSVGPlugin() {
+    return src('src/svg4everybody.min.js').pipe(dest('dist/js/'));
 }
 
 exports.build = series(
@@ -155,5 +159,6 @@ exports.build = series(
     moveHtml,
     moveFonts,
     moveImages,
-    svg
+    svg,
+    moveSVGPlugin
 );

@@ -22,6 +22,8 @@
   <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff2" crossorigin="anonymous">
 
+  <style>#wrapper.is-loading .consultation-nav{opacity: 0;transform: translateY(-10px);}#wrapper.is-loading .consultation{opacity: 0;}</style>
+
   <link rel="prefetch" href="css/styles.min.css" as="style">
   <link rel="prefetch" href="js/scripts.min.js" as="script">
 
@@ -30,11 +32,11 @@
 </head>
 <body>
 
-<div id="wrapper">
+<div id="wrapper" class="is-loading">
 <header class="header">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="header-logo">
           <a href="index.html" class="header-logo-box">
             <span class="header-logo-label">Powered by</span>
@@ -43,7 +45,7 @@
           </a>
         </div>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-9 col-sm-6 col-6">
         <div class="header-nav">
           <nav class="nav">
             <ul>
@@ -57,22 +59,34 @@
                 <a href="pricing.html" class="link">Pricing</a>
               </li>
               <li>
-                <a href="consultation.html" class="btn btn-border btn-sm">Start consultation</a>
+                <a href="consultation-step-1.html" class="btn btn-border btn-sm">Start consultation</a>
               </li>
             </ul>
           </nav>
+        </div>
+        <div class="burger">
+          <div class="burger-box">
+            <span class="burger-box-arrow"></span>
+            <span class="burger-box-arrow"></span>
+            <span class="burger-box-arrow"></span>
+            <span class="burger-box-arrow"></span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </header>
 <section class="section hero">
-  <div class="hero-bg">
-    <img data-src="images/home/folder-banner.jpg" alt="Clinically proven weight-loss" class="is-hidden">
+  <div class="hero-bg" id="home-hero">
+    <picture>
+      <source srcset="images/home/folder-banner.webp" type="image/webp">
+      <source srcset="images/home/folder-banner.jpg" type="Clinically proven weight-loss">
+      <img src="images/home/folder-banner.jpg" alt="Clinically proven weight-loss">
+    </picture>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-xl-5 col-lg-6 col-md-6 col-sm-7">
         <div class="hero-content">
           <div class="hero-content-title">
             <h1 class="title-1">Clinically proven weight-loss</h1>
@@ -81,17 +95,325 @@
             <p>There are many weight-loss programs out there and yet it still hard to find one that works. At Novo Nordisk, we use clinically backed studies and the greatest team of weight-loss scientists, to tailor a holistic weight-loss program for you.</p>
           </div>
           <div class="hero-content-action">
-            <a href="#" class="btn btn-border">See courses</a>
-            <a href="consultation.html" class="btn">Start consultation</a>
+            <a href="pricing.html" class="btn btn-border">See courses</a>
+            <a href="consultation-step-1.html" class="btn">Start consultation</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<section class="section about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="about-box">
+          <div class="about-box-icon show-on-scroll hide up">
+            <img data-src="images/home/about/caduceus.svg" alt="Clinically Proven" class="is-hidden">
+          </div>
+          <div class="about-box-title show-on-scroll hide up">
+            <h5 class="title-5">Clinically Proven</h5>
+          </div>
+          <div class="about-box-description show-on-scroll hide up">
+            <p>All our programs are clinically proven and backed by rigorous scientific standards. We publish all our scientific material, which you are free to learn more about here on our site or from any of our coaches.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="about-box">
+          <div class="about-box-icon show-on-scroll hide up">
+            <img data-src="images/home/about/pills.svg" alt="Holistic" class="is-hidden">
+          </div>
+          <div class="about-box-title show-on-scroll hide up">
+            <h5 class="title-5">Holistic</h5>
+          </div>
+          <div class="about-box-description show-on-scroll hide up">
+            <p>We know that to maintain weight-loss, it is important to take a holistic approach. We combine healthy eating, exercise, and mental well-being with laboratory work, physicians and medication.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="about-box">
+          <div class="about-box-icon show-on-scroll hide upn">
+            <img data-src="images/home/about/clipboard.svg" alt="Long-Lasting" class="is-hidden">
+          </div>
+          <div class="about-box-title show-on-scroll hide up">
+            <h5 class="title-5">Long-Lasting</h5>
+          </div>
+          <div class="about-box-description show-on-scroll hide up">
+            <p>We have an active interest in making your weight-loss last. Our clinical trials are longitudinal and our programs are designed so that you do not just lose “water weight”.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section science">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="science-video show-on-scroll hide up">
+          <div class="video">
+            <div class="video-poster">
+              <img data-src="images/home/video-banner.jpg" alt="What is the science behind it?" class="is-hidden">
+            </div>
+            <iframe data-src="https://www.youtube.com/embed/r3fE6FQT82s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#play-button"></use></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1">
+        <div class="science-title show-on-scroll hide up">
+          <h4 class="title-4">What is the science behind it?</h4>
+        </div>
+        <div class="science-description show-on-scroll hide up">
+          <p>Novo Nordisk has published several studies on the efficacy of Liraglutide as medication for weight-loss under a number of control variables. We know from those studies that medication is effective in treating obesity and promoting weight-loss.
+            But medication combined with exercise, healthy eating and stress management, boosts the results significantly. You can read more about our studies here and here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section start">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6">
+        <div class="start-title show-on-scroll hide up">
+          <h4 class="title-4">How do I get started?</h4>
+        </div>
+        <div class="start-description show-on-scroll hide up">
+          <p>Our program is tailored to patients of obesity, which is broadly defined as having a BMI larger than 30. If you qualify using the calculator on our page, we’ll direct you to a specialized weight-loss physician who will ensure we get the medical details necessary for your program.</p>
+          <p>In short: </p>
+          <ul>
+            <li>Answer the brief questionnaire on this site</li>
+            <li>Wait for the results from our partner physicians</li>
+            <li>Immediate start via email if you qualify</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xl-4 offset-xl-1 col-lg-5 offset-lg-1">
+        <div class="banner show-on-scroll hide up">
+          <img data-src="images/home/banner-1.jpg" alt="How do I get started?" class="is-hidden">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section reviews">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="reviews-carousel show-on-scroll hide up">
+          <div class="reviews-carousel-slide">
+            <div class="review">
+              <div class="review-avatar show-on-scroll hide up">
+                <img data-src="https://cdn.pixabay.com/photo/2015/02/09/14/31/blonde-629726__340.jpg" alt="Dorian Delaney" class="is-hidden">
+              </div>
+              <div class="review-author">
+                <p class="title-4">Dorian Delaney</p>
+              </div>
+              <div class="review-position">
+                <p class="title-5">Obesity Patient</p>
+              </div>
+              <div class="review-description">
+                  <p>I’ve been on Liraglutide for several months and have been seeing results. <br> But when I tried the Novo Nordisk programme and started incorporating all their offerings into my daily routine, my weight-loss has been only been substantial, but also sustained.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-carousel-slide">
+            <div class="review">
+              <div class="review-avatar show-on-scroll hide up">
+                <img data-src="https://cdn.pixabay.com/photo/2017/08/01/08/29/people-2563491__340.jpg" alt="Dorian Delaney" class="is-hidden">
+              </div>
+              <div class="review-author">
+                <p class="title-4">Dorian Delaney</p>
+              </div>
+              <div class="review-position">
+                <p class="title-5">Obesity Patient</p>
+              </div>
+              <div class="review-description">
+                <p>I’ve been on Liraglutide for several months and have been seeing results. <br> But when I tried the Novo Nordisk programme and started incorporating all their offerings into my daily routine, my weight-loss has been only been substantial, but also sustained.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-carousel-slide">
+            <div class="review">
+              <div class="review-avatar show-on-scroll hide up">
+                <img data-src="https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658__340.jpg" alt="Dorian Delaney" class="is-hidden">
+              </div>
+              <div class="review-author">
+                <p class="title-4">Dorian Delaney</p>
+              </div>
+              <div class="review-position">
+                <p class="title-5">Obesity Patient</p>
+              </div>
+              <div class="review-description">
+                <p>I’ve been on Liraglutide for several months and have been seeing results. <br> But when I tried the Novo Nordisk programme and started incorporating all their offerings into my daily routine, my weight-loss has been only been substantial, but also sustained.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section partners">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="title-4 show-on-scroll hide up">Our partner</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="partners-list show-on-scroll hide up">
+          <div class="partners-list-box">
+            <img src="../images/partners/wp.svg" alt="WP">
+          </div>
+          <div class="partners-list-box">
+            <img src="../images/partners/disney.svg" alt="Disney">
+          </div>
+          <div class="partners-list-box">
+            <img src="../images/partners/iqos.svg" alt="Iqos">
+          </div>
+          <div class="partners-list-box">
+            <img src="../images/partners/behance.svg" alt="Behance">
+          </div>
+          <div class="partners-list-box">
+            <img src="../images/partners/comment.svg" alt="Comment">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section today">
+  <div class="bg">
+    <img data-src="images/home/banner-2.jpg" alt="Clinically proven weight-loss" class="is-hidden">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="today-title show-on-scroll hide up">
+          <h3 class="title-3">Take the first step today</h3>
+        </div>
+        <div class="today-description show-on-scroll hide up">
+          <p>Answer the questionnaire to see if you qualify</p>
+        </div>
+        <div class="today-action show-on-scroll hide up">
+          <a href="consultation-step-1.html" class="btn">Start-consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <a href="index.html" class="header-logo-box">
+          <img src="images/partners/R.png" alt="R" class="header-logo-partner">
+          <img src="images/logo.png" alt="Novo Rodisk">
+        </a>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="footer-nav">
+          <nav class="nav">
+            <ul>
+              <li>
+                <a href="index.html" class="link active">Home</a>
+              </li>
+              <li>
+                <a href="about.html" class="link">About us</a>
+              </li>
+              <li>
+                <a href="pricing.html" class="link">Pricing</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="social">
+          <a href="https://twitter.com/" target="_blank" class="social-link">
+            <svg class="icon"><use xlink:href="images/sprite.svg#twitter"></use></svg>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-link">
+            <svg class="icon"><use xlink:href="images/sprite.svg#instagram"></use></svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="social-link">
+            <svg class="icon"><use xlink:href="images/sprite.svg#facebook"></use></svg>
+          </a>
+          <a href="https://www.pinterest.com/" target="_blank" class="social-link">
+            <svg class="icon"><use xlink:href="images/sprite.svg#pinterest"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-description">
+          <p>In no impression assistance contrasted. Manners she wishing justice hastily new anxious. <br> At discovery discourse departure objection we. Few extensive add delighted tolerably sincerity her.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <p>We want to ensure that our</p>
+  </div>
+</footer>
+
+<div class="popup" id="order">
+  <div class="popup-box">
+    <div class="popup-box-title">
+      <h4 class="title-4">Order a product</h4>
+    </div>
+    <div class="popup-box-description">
+      <p>Leave your contact details, our manager will call you back</p>
+    </div>
+    <form>
+      <label class="input-container">
+        <span class="input-label">Name</span>
+        <input type="text" class="input" placeholder="Your name">
+      </label>
+      <label class="input-container">
+        <span class="input-label">E-mail</span>
+        <input type="email" class="input" placeholder="E-mail">
+      </label>
+      <label class="input-container">
+        <span class="input-label">Telephone</span>
+        <input type="email" class="input" placeholder="Telephone">
+      </label>
+      <div class="popup-box-action">
+        <a href="#success" class="btn open-popup">Leave contact</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="popup" id="success">
+  <div class="popup-box">
+    <div class="popup-box-title">
+      <h4 class="title-4">Your application is completed</h4>
+    </div>
+    <div class="popup-box-description">
+      <p>Our manager will call you back within 15 minutes</p>
+    </div>
+    <div class="popup-box-action">
+      <button class="btn close-popup">Close</button>
+    </div>
+  </div>
+</div>
 </div>
 
 <script src="js/scripts.min.js"></script>
+<script src="js/svg4everybody.min.js"></script>
+<script>
+    svg4everybody();
+</script>
 
 </body>
 </html>
+<!-- 08yEA7m4LHN} -->

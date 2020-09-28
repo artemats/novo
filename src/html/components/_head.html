@@ -22,6 +22,8 @@
   <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff2" crossorigin="anonymous">
 
+  <style>#wrapper.is-loading .consultation-nav{opacity: 0;transform: translateY(-10px);}#wrapper.is-loading .consultation{opacity: 0;}</style>
+
   <link rel="prefetch" href="css/styles.min.css" as="style">
   <link rel="prefetch" href="js/scripts.min.js" as="script">
 
@@ -30,4 +32,4 @@
 </head>
 <body>
 
-<div id="wrapper">
+<div id="wrapper" class="is-loading">

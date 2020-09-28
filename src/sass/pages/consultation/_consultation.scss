@@ -1,0 +1,205 @@
+.consultation{
+  padding: 0 0 100px;
+  transition: opacity .4s ease;
+    &-nav{
+      border-bottom: 1px #D4D4D4 solid;
+      padding-top: 48px;
+      transition: opacity .4s ease, transform .4s ease;
+        &-list{
+          display: flex;
+          align-items: flex-end;
+            .link{
+              margin-right: 15px;
+              position: relative;
+              padding: 10px 0 30px 0;
+              flex: 1;
+                &:before{
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  height: 7px;
+                  width: 100%;
+                  background-color: $orange;
+                  opacity: .2;
+                  transition: opacity .2s ease;
+                }
+                &:last-child{
+                  margin-right: 0;
+                }
+                &.active{
+                    &:before{
+                      opacity: 1;
+                    }
+                }
+                @include hover(991){
+                  &:hover{
+                    &:before{
+                      opacity: 1;
+                    }
+                  }
+                }
+            }
+            @include d(1200){
+              display: block;
+              white-space: nowrap;
+              overflow-y: hidden;
+              overflow-x: auto;
+              width: 100vw;
+              margin-left: calc(-6vw - 15px);
+              padding: 0 6vw;
+                .link{
+                  display: inline-block;
+                  flex: none;
+                }
+            }
+            @include d(767){
+              margin-left: -30px;
+              padding: 0 30px;
+            }
+        }
+    }
+    &-box{
+      padding-top: 90px;
+        &-action{
+          text-align: center;
+          padding: 20px 0;
+        }
+        &-message{
+          padding-top: 260px;
+            .title-4{
+              margin-bottom: 10px;
+            }
+            .btn{
+              margin-top: 20px;
+            }
+            p{
+              padding: 10px 0;
+            }
+            @include d(1200){
+              padding-top: 220px;
+            }
+            @include d(991){
+              padding-top: 180px;
+            }
+            @include d(767){
+              padding-top: 130px;
+            }
+            @include d(575){
+              padding-top: 90px;
+            }
+            @include d(480){
+              padding-top: 50px;
+            }
+        }
+        &-image{
+          margin: 15px 0 30px;
+        }
+        &-confirm{
+          text-align: center;
+        }
+        .consultation-box-confirm{
+          .title-4{
+            padding-top: 10px;
+          }
+        }
+        .title-2{
+          margin-bottom: 32px;
+            @include d(480){
+              margin-bottom: 20px;
+            }
+        }
+        .title-4{
+          padding: 35px 0 30px;
+            @include d(575){
+              font-size: 16px;
+            }
+            @include d(480){
+              padding: 15px 0 10px;
+            }
+        }
+        p{
+          margin: 4px 0 0;
+            a{
+              text-decoration: underline;
+            }
+        }
+        .input-container{
+          padding-bottom: 40px;
+            &-title{
+              margin-top: -20px;
+              padding-bottom: 30px;
+                @include d(480){
+                  margin-top: -5px;
+                  padding-bottom: 20px;
+                }
+            }
+            @include d(480){
+              padding-bottom: 30px;
+            }
+        }
+        @include d(480){
+          padding-top: 60px;
+        }
+    }
+    &-confirm{
+        &-icon{
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin: 0 auto 40px;
+          background-color: $blue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+            img{
+              max-width: 87px;
+            }
+            @include d(1200){
+              width: 160px;
+              height: 160px;
+                img{
+                  max-width: 65px;
+                }
+            }
+            @include d(480){
+              width: 120px;
+              height: 120px;
+                img{
+                  max-width: 48px;
+                }
+            }
+        }
+        &-value{
+          font-size: 48px;
+          color: $blue;
+            @include d(480){
+              font-size: 42px;
+            }
+        }
+    }
+    &-done{
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+        &-preview{
+          margin: 0 auto 60px;
+          width: 258px;
+        }
+        .consultation-box-message{
+          padding: 20px 0;
+        }
+        @include dh(550){
+          height: auto;
+          align-items: flex-start;
+        }
+    }
+    .btn{
+      font-size: 10px;
+      color: $white;
+      letter-spacing: .06em;
+      max-width: 470px;
+      width: 100%;
+    }
+}

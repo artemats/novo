@@ -1,0 +1,42 @@
+.subscribe{
+  @extend .today;
+  padding: 95px 0;
+    .form{
+      margin: 60px auto 16px;
+      max-width: 954px;
+        @include d(1440){
+          max-width: 754px;
+        }
+        @include d(1200){
+          max-width: 650px;
+        }
+        @include d(480){
+          margin: 30px auto 15px;
+        }
+    }
+    .input{
+      margin-right: -10px;
+      padding: 0 28px;
+        &-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+            @include d(480){
+              flex-direction: column;
+                .btn{
+                  max-width: 100%;
+                }
+            }
+        }
+        @include d(480){
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+    }
+    .btn{
+      font-size: 10px;
+      color: $white;
+      letter-spacing: .06em;
+    }
+}

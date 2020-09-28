@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+  <title>Novo Nordisk</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="theme-color" content="#005AD2">
+  <meta name="msapplication-navbutton-color" content="#005AD2">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#005AD2">
+
+  <link rel="preload" href="fonts/Verdana-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Bold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <style>#wrapper.is-loading .consultation-nav{opacity: 0;transform: translateY(-10px);}#wrapper.is-loading .consultation{opacity: 0;}</style>
+
+  <link rel="prefetch" href="css/styles.min.css" as="style">
+  <link rel="prefetch" href="js/scripts.min.js" as="script">
+
+  <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+<body>
+
+<div id="wrapper" class="is-loading">
+<section class="section consultation-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="consultation-nav-list">
+          <a href="consultation-step-1.html" class="link link-sm"><span class="link-num"></span>General information</a>
+          <a href="consultation-step-2.html" class="link link-sm"><span class="link-num"></span>Account Creation</a>
+          <a href="consultation-step-3.html" class="link link-sm"><span class="link-num"></span>Password confirmation</a>
+          <a href="consultation-step-4.html" class="link link-sm"><span class="link-num"></span>Health status</a>
+          <a href="consultation-step-5.html" class="link link-sm"><span class="link-num"></span>Credit card pay</a>
+          <a href="consultation-step-6.html" class="link link-sm active"><span class="link-num"></span>Pay confirm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section consultation">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="consultation-box">
+          <div class="consultation-box-confirm">
+            <div class="consultation-confirm-icon">
+              <img src="../images/icons/check-white.svg" alt="Confirm">
+            </div>
+            <p class="consultation-confirm-value">$100.00</p>
+            <h4 class="title-4">Your payment is complete.</h4>
+            <div class="consultation-box-action">
+              <a href="consultation-done.html" class="btn">Confirm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<script src="js/scripts.min.js"></script>
+<script src="js/svg4everybody.min.js"></script>
+<script>
+    svg4everybody();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+.today{
+  text-align: center;
+  padding: 120px 0;
+  overflow: hidden;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #F3F3F3;
+      opacity: .94;
+      //z-index: 1;
+      pointer-events: none;
+    }
+    &-title{
+      margin-bottom: 18px;
+    }
+    &-description{
+      font-size: 14px;
+      margin-bottom: 76px;
+        @include d(991){
+          margin-bottom: 50px;
+        }
+    }
+    &-action{
+      .btn{
+        color: $white;
+      }
+    }
+    @include d(480){
+      padding: 80px 0;
+    }
+}
