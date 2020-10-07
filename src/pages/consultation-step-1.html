@@ -60,7 +60,8 @@
           <h4 class="title-4">General Information</h4>
           <label class="input-container">
             <span class="input-label">Input your name</span>
-            <input type="text" class="input" placeholder="Your name">
+            <input type="text" class="input" placeholder="Your name" data-type="string">
+            <span class="input-error">Incorrect data type</span>
           </label>
           <label class="input-container">
             <span class="input-label">Birthday</span>
@@ -91,11 +92,13 @@
           <h4 class="title-4">Height and Weight</h4>
           <label class="input-container">
             <span class="input-label">Your height in centimeters</span>
-            <input type="text" class="input" placeholder="Your height">
+            <input type="text" class="input" placeholder="Your height" data-type="numbers">
+            <span class="input-error">Please enter numbers</span>
           </label>
           <label class="input-container">
             <span class="input-label">Your weight in kilograms</span>
-            <input type="text" class="input" placeholder="Your weight">
+            <input type="text" class="input" placeholder="Your weight" data-type="numbers">
+            <span class="input-error">Please enter numbers</span>
           </label>
           <h4 class="title-4">Medical History</h4>
           <div class="input-container-title">
@@ -184,6 +187,7 @@
 
 <script src="js/scripts.min.js"></script>
 <script src="js/svg4everybody.min.js"></script>
+<script src="js/validation.js"></script>
 <script>
     svg4everybody();
 </script>

@@ -84,6 +84,7 @@ function watchTask() {
 
     watch('src/sass/**/*', parallel(scssTask));
     watch(['src/js/index.js'], parallel(jsTask));
+    watch(['src/js/validation.js'], moveValidationFile);
     watch('src/html/**/*', htmlTask);
     watch('src/pages/*', moveHtml);
 
@@ -153,6 +154,10 @@ function moveSVGPlugin() {
     return src('src/svg4everybody.min.js').pipe(dest('dist/js/'));
 }
 
+function moveValidationFile() {
+    return src('src/js/validation.js').pipe(dest('dist/js'));
+}
+
 exports.build = series(
     removeBuild,
     parallel(htmlTask, scssTask, jsTask),
@@ -160,5 +165,6 @@ exports.build = series(
     moveFonts,
     moveImages,
     svg,
-    moveSVGPlugin
+    moveSVGPlugin,
+    moveValidationFile
 );
