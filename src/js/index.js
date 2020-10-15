@@ -85,7 +85,10 @@ $(document).ready(function () {
     });
 
     $('[data-toggle="datepicker"]').datepicker({
-        format: 'dd.mm.yyyy'
+        format: 'dd.mm.yyyy',
+        pick: function () {
+            $(this).trigger('focus');
+        }
     });
 
     // DETECT AGREE CLICK //
