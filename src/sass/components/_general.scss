@@ -493,3 +493,9 @@ p, li{
   background-color: $grey;
   margin: 20px 0;
 }
+
+.tab-content{
+    &:not(:first-child){
+      display: none;
+    }
+}

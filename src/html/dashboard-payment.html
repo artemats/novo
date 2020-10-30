@@ -1,0 +1,72 @@
+//= components/_head.html
+//= components/_header-dashboard.html
+<section class="section dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        //= components/_sidebar.html
+      </div>
+      <div class="col-lg-9">
+        <div class="dashboard-content">
+          <div class="dashboard-tabs">
+            <div class="dashboard-tabs-item is-active tab-btn" data-tab-id="0">Card</div>
+            <div class="dashboard-tabs-item tab-btn" data-tab-id="1">Stripe</div>
+          </div>
+          <div class="dashboard-tabs-content">
+            <div class="tab-content" data-tab-content-id="0">
+              <div class="row">
+                <div class="col-lg-7">
+                  <div class="input-container">
+                    <span class="input-label">Card number</span>
+                    <input type="text" class="input" value="1234 5678 9012 3456" readonly />
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="input-container">
+                        <span class="input-label">Date</span>
+                        <input type="text" class="input" value="12/21" readonly />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="input-container">
+                        <span class="input-label">CVC</span>
+                        <input type="text" class="input" value="123" readonly />
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn">Edit data</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" data-tab-content-id="1">
+              <div class="row">
+                <div class="col-lg-7">
+                  <div class="input-container">
+                    <span class="input-label">Stripe data</span>
+                    <input type="text" class="input" value="2344 2342 7563 6567" readonly />
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="input-container">
+                        <span class="input-label">Date</span>
+                        <input type="text" class="input" value="05/21" readonly />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="input-container">
+                        <span class="input-label">CVC</span>
+                        <input type="text" class="input" value="642" readonly />
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn">Edit data</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+//= components/_scripts.html

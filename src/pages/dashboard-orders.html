@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+  <title>Novo Nordisk</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="theme-color" content="#005AD2">
+  <meta name="msapplication-navbutton-color" content="#005AD2">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#005AD2">
+
+  <link rel="preload" href="fonts/Verdana-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Bold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Verdana-Regular.woff" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <style>#wrapper.is-loading .consultation-nav{opacity: 0;transform: translateY(-10px);}#wrapper.is-loading .consultation{opacity: 0;}</style>
+
+  <link rel="prefetch" href="css/styles.min.css" as="style">
+  <link rel="prefetch" href="js/scripts.min.js" as="script">
+
+  <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+<body>
+
+<div id="wrapper" class="is-loading">
+<header class="header header-dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="user">
+          <div class="user-action">
+            <button class="link">Log out</button>
+            <div class="user-action-icon">
+              <img src="images/icons/logout.svg" alt="Log out">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="section dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="dashboard-sidebar">
+          <div class="dashboard-sidebar-nav">
+            <ul>
+              <li>
+                <a href="dashboard.html" class="is-active">User data</a>
+              </li>
+              <li>
+                <a href="dashboard-payment.html">Payments data</a>
+              </li>
+              <li>
+                <a href="dashboard-orders.html">Orders info</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="dashboard-content">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="orders">
+                <p class="orders-title title-4">Current order</p>
+                <div class="orders-box">
+                  <p class="price-value"><span class="price-value-label">$</span>100<span class="price-value-lip">/month</span></p>
+                  <div class="pricing-box-title">
+                    <p>For extra help with diet and exercise</p>
+                  </div>
+                  <p class="orders-box-date"><span>Date: </span>28.10.2020</p>
+                </div>
+                <p class="orders-title title-4">Past orders</p>
+                <div class="orders-box">
+                  <p class="price-value"><span class="price-value-label">$</span>200<span class="price-value-lip">/month</span></p>
+                  <div class="pricing-box-title">
+                    <p>For a full package tailored to your needs</p>
+                  </div>
+                  <p class="orders-box-date"><span>Date: </span>28.09.2020</p>
+                </div>
+                <div class="orders-box">
+                  <p class="price-value"><span class="price-value-label">$</span>100<span class="price-value-lip">/month</span></p>
+                  <div class="pricing-box-title">
+                    <p>For extra help with diet and exercise</p>
+                  </div>
+                  <p class="orders-box-date"><span>Date: </span>28.07.2020</p>
+                </div>
+                <div class="orders-box">
+                  <p class="price-value"><span class="price-value-label">$</span>70<span class="price-value-lip">/month</span></p>
+                  <div class="pricing-box-title">
+                    <p>For a small push in the right direction</p>
+                  </div>
+                  <p class="orders-box-date"><span>Date: </span>28.05.2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<script src="js/scripts.min.js"></script>
+<script src="js/svg4everybody.min.js"></script>
+<script src="js/validation.js"></script>
+<script>
+    svg4everybody();
+</script>
+
+</body>
+</html>

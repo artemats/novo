@@ -103,6 +103,17 @@ $(document).ready(function () {
        videoBox.addClass('is-active');
     });
 
+    // TABS SWITCH //
+    $(document).on('click', '.tab-btn', function () {
+        const tabBtn = $(this);
+        const tabBtnId = tabBtn.attr('data-tab-id');
+        $('.tab-btn').removeClass('is-active');
+
+        $('.tab-content').hide();
+        $(`.tab-content[data-tab-content-id="${tabBtnId}"]`).fadeIn();
+        tabBtn.addClass('is-active');
+    });
+
     setIdenticalHeight($('.result-box'));
 
 });
