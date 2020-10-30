@@ -9,6 +9,7 @@
       padding: 50px 90px;
         &-title{
           padding: 10px 0 5px;
+          margin-bottom: 35px;
         }
         &-description{
           padding: 10px 0 50px;
@@ -24,6 +25,14 @@
             }
             @include d(480){
               margin-top: 20px;
+            }
+        }
+        &-detail{
+          text-align: center;
+          font-size: 14px;
+          padding: 20px 0 10px;
+            a{
+              text-decoration: underline;
             }
         }
         @include d(767){

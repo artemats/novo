@@ -54,18 +54,39 @@
   </div>
 </footer>
 
-<div class="popup" id="order">
+<div class="popup" id="login">
   <div class="popup-box">
     <div class="popup-box-title">
-      <h4 class="title-4">Order a product</h4>
+      <h4 class="title-4">Sign In</h4>
     </div>
-    <div class="popup-box-description">
-      <p>Leave your contact details, our manager will call you back</p>
+    <form>
+      <label class="input-container">
+        <span class="input-label">E-mail</span>
+        <input type="email" class="input" placeholder="E-mail" />
+      </label>
+      <label class="input-container">
+        <span class="input-label">Password</span>
+        <input type="password" class="input" placeholder="Password" />
+      </label>
+      <div class="popup-box-action">
+        <button class="btn open-popup">Login</button>
+      </div>
+      <div class="popup-box-detail">
+        <p>Don't have account? <a href="#registration" class="open-popup">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="popup" id="registration">
+  <div class="popup-box">
+    <div class="popup-box-title">
+      <h4 class="title-4">Sign Up</h4>
     </div>
     <form>
       <label class="input-container">
         <span class="input-label">Name</span>
-        <input type="text" class="input" placeholder="Your name" />
+        <input type="text" class="input" placeholder="Name" />
       </label>
       <label class="input-container">
         <span class="input-label">E-mail</span>
@@ -73,10 +94,21 @@
       </label>
       <label class="input-container">
         <span class="input-label">Telephone</span>
-        <input type="email" class="input" placeholder="Telephone" />
+        <input type="tel" class="input" placeholder="Telephone" />
+      </label>
+      <label class="input-container">
+        <span class="input-label">Password</span>
+        <input type="password" class="input" placeholder="Password" />
+      </label>
+      <label class="input-container">
+        <span class="input-label">Confirm password</span>
+        <input type="password" class="input" placeholder="Password" />
       </label>
       <div class="popup-box-action">
-        <a href="#success" class="btn open-popup">Leave contact</a>
+        <button class="btn open-popup">Sign Up</button>
+      </div>
+      <div class="popup-box-detail">
+        <p>Already have account? <a href="#login" class="open-popup">Sign In</a></p>
       </div>
     </form>
   </div>

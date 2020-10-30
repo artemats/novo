@@ -231,6 +231,7 @@ p, li{
   padding: 0;
   color: $blue-dark;
   transition: color .2s ease;
+  white-space: nowrap;
     &.active{
       color: $grey;
     }
