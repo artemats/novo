@@ -1,0 +1,85 @@
+.dashboard{
+  padding: 20px 0 50px;
+  background-color: $grey-light;
+    &-content{
+        .btn{
+          margin-top: 30px;
+        }
+    }
+    .input{
+      height: 46px;
+      border-color: $grey;
+      box-shadow: none;
+      background-color: #fdfdfd;
+        &-label{
+          margin-bottom: 10px;
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: .05em;
+        }
+        &-container{
+          padding-bottom: 20px;
+        }
+    }
+    .pricing{
+        &-box{
+            &-title{
+              padding: 0;
+              color: $black;
+              margin-top: 20px;
+            }
+            &-list{
+              padding: 0 5px 0 0;
+              font-size: 12px;
+                li{
+                  padding-left: 20px;
+                  margin-bottom: 5px;
+                    &:before{
+                      top: 7px;
+                      width: 6px;
+                      height: 6px;
+                    }
+                }
+            }
+        }
+    }
+    .price{
+        &-value{
+          color: $black;
+          line-height: 1.4em;
+        }
+    }
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+    &-data{
+      &-name{
+        text-transform: capitalize;
+      }
+      &-sex{
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 1em;
+        color: $black;
+        margin-top: -10px;
+        padding-left: 2px;
+      }
+    }
+    &-action{
+      padding-left: 50px;
+      display: inline-flex;
+      align-items: center;
+        &-icon{
+          width: 18px;
+          height: 18px;
+          margin-left: 10px;
+        }
+        .link{
+          color: $white;
+        }
+    }
+}

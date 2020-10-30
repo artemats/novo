@@ -42,7 +42,7 @@
           </label>
           <div class="input-container">
             <span class="input-label">Your biological sex</span>
-            <fieldset class="radio-box" id="sex">
+            <fieldset class="radio-box" name="sex">
               <label class="radio-box-item">
                 <input type="radio" name="sex" value="Male" class="input-radio" />
                 <span class="input-radio-icon"></span>
@@ -69,38 +69,40 @@
             <p>Do any of the following currently apply to you?</p>
           </div>
           <div class="input-container">
-            <div class="radio-box">
-              <label class="radio-box-item">
-                <input type="checkbox" value="Drug or alcohol abuse" class="input-checkbox" />
-                <span class="input-checkbox-icon"></span>
-                <span class="input-radio-title">Drug or alcohol abuse</span>
-              </label>
-              <label class="radio-box-item">
-                <input type="checkbox" value="Pregnancy" class="input-checkbox" />
-                <span class="input-checkbox-icon"></span>
-                <span class="input-radio-title">Pregnancy</span>
-              </label>
-              <label class="radio-box-item">
-                <input type="checkbox" value="Breastfeeding" class="input-checkbox" />
-                <span class="input-checkbox-icon"></span>
-                <span class="input-radio-title">Breastfeeding</span>
-              </label>
-              <label class="radio-box-item">
-                <input type="checkbox" value="Eating disorder" class="input-checkbox" />
-                <span class="input-checkbox-icon"></span>
-                <span class="input-radio-title">Eating disorder</span>
-              </label>
-              <label class="radio-box-item">
-                <input type="checkbox" value="Bariatric surgery (past 18 months)" class="input-checkbox" />
-                <span class="input-checkbox-icon"></span>
-                <span class="input-radio-title">Bariatric surgery (past 18 months)</span>
-              </label>
-              <label class="radio-box-item">
-                <input type="checkbox" value="None" class="input-checkbox" />
-                <span class="input-checkbox-icon"></span>
-                <span class="input-radio-title">None</span>
-              </label>
-            </div>
+            <fieldset name="history">
+              <div class="radio-box">
+                <label class="radio-box-item">
+                  <input type="checkbox" name="history" value="Drug or alcohol abuse" class="input-checkbox" />
+                  <span class="input-checkbox-icon"></span>
+                  <span class="input-radio-title">Drug or alcohol abuse</span>
+                </label>
+                <label class="radio-box-item">
+                  <input type="checkbox" name="history" value="Pregnancy" class="input-checkbox" />
+                  <span class="input-checkbox-icon"></span>
+                  <span class="input-radio-title">Pregnancy</span>
+                </label>
+                <label class="radio-box-item">
+                  <input type="checkbox" name="history" value="Breastfeeding" class="input-checkbox" />
+                  <span class="input-checkbox-icon"></span>
+                  <span class="input-radio-title">Breastfeeding</span>
+                </label>
+                <label class="radio-box-item">
+                  <input type="checkbox" name="history" value="Eating disorder" class="input-checkbox" />
+                  <span class="input-checkbox-icon"></span>
+                  <span class="input-radio-title">Eating disorder</span>
+                </label>
+                <label class="radio-box-item">
+                  <input type="checkbox" name="history" value="Bariatric surgery (past 18 months)" class="input-checkbox" />
+                  <span class="input-checkbox-icon"></span>
+                  <span class="input-radio-title">Bariatric surgery (past 18 months)</span>
+                </label>
+                <label class="radio-box-item">
+                  <input type="checkbox" name="history" value="None" class="input-checkbox" />
+                  <span class="input-checkbox-icon"></span>
+                  <span class="input-radio-title">None</span>
+                </label>
+              </div>
+            </fieldset>
           </div>
           <p>Which of the following reasons most describes you signing up to this programme?</p>
           <div class="input-container">

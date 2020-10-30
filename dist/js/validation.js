@@ -8,9 +8,15 @@ $('#step-1').validate({
         },
         sex: {
             required: true
+        },
+        history: {
+            required: true
         }
     },
     messages: {
-        name: 'Name is required',
-    }
+        name: 'Name is required'
+    },
+    submitHandler: function(form) {
+        console.log(form);
+    },
 });

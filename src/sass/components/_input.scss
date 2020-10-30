@@ -268,6 +268,15 @@
           opacity: 0;
           transition: opacity .2s ease;
         }
+        & ~ label.error{
+          bottom: auto;
+          top: -30px;
+        }
+        &.error{
+          & ~ .input-checkbox-icon{
+            border-color: tomato;
+          }
+        }
         &:checked{
             & ~ .input-checkbox-bg{
               opacity: 1;

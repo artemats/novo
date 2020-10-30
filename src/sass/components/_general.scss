@@ -485,3 +485,10 @@ p, li{
       max-height: none;
     }
 }
+
+.hr{
+  border: none;
+  height: 1px;
+  background-color: $grey;
+  margin: 20px 0;
+}

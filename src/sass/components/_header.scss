@@ -78,6 +78,11 @@
           display: block !important;
         }
     }
+    &-dashboard{
+      border-bottom: 1px $grey solid;
+      padding: 22px 0 20px;
+      background-color: $blue-dark;
+    }
     @include d(767){
       padding: 5px 0 2px;
     }
