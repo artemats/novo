@@ -107,9 +107,9 @@ $(document).ready(function () {
     $(document).on('click', '.tab-btn', function () {
         const tabBtn = $(this);
         const tabBtnId = tabBtn.attr('data-tab-id');
-        $('.tab-btn').removeClass('is-active');
-
-        $('.tab-content').hide();
+        const tabRole = tabBtn.attr('data-tab-role');
+        $(`.tab-btn[data-tab-role="${tabRole}"]`).removeClass('is-active');
+        $(`.tab-content[data-tab-role="${tabRole}"]`).hide();
         $(`.tab-content[data-tab-content-id="${tabBtnId}"]`).fadeIn();
         tabBtn.addClass('is-active');
     });
