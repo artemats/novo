@@ -53,13 +53,13 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-7 offset-xl-3 col-lg-9 offset-lg-2 col-md-10 offset-md-1">
-        <div class="consultation-box">
+        <form class="consultation-box" id="consent">
           <h2 class="title-2">Consent</h2>
           <h4 class="title-4">You confirm that you will read the Patient Information Leaflet (PIL) that will be provided with your order.</h4>
           <div class="input-container">
             <div class="radio-box">
               <label class="radio-box-item">
-                <input type="checkbox" value="Yes" class="input-checkbox">
+                <input type="checkbox" value="Yes" class="input-checkbox check-agree">
                 <span class="input-checkbox-icon"></span>
                 <span class="input-radio-title">Yes</span>
               </label>
@@ -69,7 +69,7 @@
           <div class="input-container">
             <div class="radio-box">
               <label class="radio-box-item">
-                <input type="checkbox" value="Yes" class="input-checkbox">
+                <input type="checkbox" value="Yes" class="input-checkbox check-agree">
                 <span class="input-checkbox-icon"></span>
                 <span class="input-radio-title">Yes</span>
               </label>
@@ -79,12 +79,12 @@
           <div class="input-container">
             <div class="radio-box">
               <label class="radio-box-item">
-                <input type="radio" name="details" value="Yes" class="input-checkbox">
+                <input type="radio" name="docagree" checked="checked" value="1" class="input-checkbox">
                 <span class="input-checkbox-icon"></span>
                 <span class="input-radio-title">Yes</span>
               </label>
               <label class="radio-box-item">
-                <input type="radio" name="details" value="No" class="input-checkbox">
+                <input type="radio" name="docagree" value="0" class="input-checkbox">
                 <span class="input-checkbox-icon"></span>
                 <span class="input-radio-title">No</span>
               </label>
@@ -94,12 +94,12 @@
             <p>Please give us the name and address of your current doctor.</p>
           </div>
           <label class="input-container">
-            <textarea name="question" cols="10" rows="5" class="textarea" placeholder="Some answer"></textarea>
+            <textarea name="docInfo" cols="10" rows="5" class="textarea" placeholder="Some answer"></textarea>
           </label>
           <div class="consultation-box-action">
-            <a href="consultation-step-5.html" class="btn">Next</a>
+            <button class="btn disabled">Next</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

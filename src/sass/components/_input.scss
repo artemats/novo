@@ -33,6 +33,18 @@
     @include d(575){
       font-size: 14px;
     }
+    &-error{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    color: tomato;
+    font-size: 12px;
+    transition: opacity .1s ease;
+    pointer-events: none;
+    @include d(480){
+      bottom: 10px;
+    }
+  }
     &-container{
       position: relative;
       display: block;
@@ -63,6 +75,18 @@
                     border-radius: 0 6px 6px 0;
                   }
                 }
+            }
+        }
+        &-message{
+          text-align: center;
+          color: tomato;
+          font-size: 12px;
+          padding: 0 20px;
+          display: none;
+            p{
+              line-height: 1.25em;
+              max-width: 300px;
+              margin: 0 auto;
             }
         }
         &.__payment{
@@ -132,12 +156,38 @@
                 }
             }
         }
+        &.__select{
+            .input{
+              padding-right: 35px;
+            }
+            &:before{
+              content: '';
+              position: absolute;
+              right: 15px;
+              top: 27px;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 8px 5px 0 5px;
+              border-color: $black transparent transparent transparent;
+                @include d(1200){
+                  top: 25px;
+                }
+                @include d(991){
+                  top: 23px;
+                }
+            }
+        }
         label.error{
           @extend .input-error;
+          bottom: 10px;
+            @include d(480){
+              bottom: 4px;
+            }
         }
     }
     &-label{
-      display: inline-block;
+      display: block;
       color: $blue-dark;
       margin-bottom: 25px;
         &-icon{
@@ -272,11 +322,11 @@
           bottom: auto;
           top: -30px;
         }
-        &.error{
-          & ~ .input-checkbox-icon{
-            border-color: tomato;
-          }
-        }
+        //&.error{
+        //  & ~ .input-checkbox-icon{
+        //    border-color: tomato;
+        //  }
+        //}
         &:checked{
             & ~ .input-checkbox-bg{
               opacity: 1;
@@ -345,18 +395,6 @@
         @include d(480){
           bottom: 43px;
           right: 12px;
-        }
-    }
-    &-error{
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      color: tomato;
-      font-size: 12px;
-      transition: opacity .1s ease;
-      pointer-events: none;
-        @include d(480){
-          bottom: 10px;
         }
     }
     &.error{
@@ -429,6 +467,10 @@
                 }
                 @include d(575){
                   min-height: 150px;
+                }
+                label.error{
+                  bottom: auto;
+                  top: 0;
                 }
             }
             label.error{

@@ -20,53 +20,71 @@
     <div class="row">
       <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-2 col-md-10 offset-md-1">
         <div class="consultation-box">
-          <h4 class="title-4">Payment Information</h4>
-          <p>We will reserve your first month’s bill on your credit card upon checkout. However you will <a
-            href="#">not be billed</a> if your physician does not approve you for the programme. Recurring monthly billing will start from the date your medication has been sent, and can be turned off any time in your account settings.</p>
-          <div class="consultation-box-image">
-            <img src="../images/payments.png" alt="" />
-          </div>
-          <label class="input-container __payment" data-currency="$">
-            <span class="input-label">Payment  amount</span>
-            <input type="number" class="input" value="100.00" readonly />
-            <button class="btn btn-edit" id="toggle-value">Edit</button>
-          </label>
-          <label class="input-container">
-            <span class="input-label">Name on card</span>
-            <input type="text" class="input" placeholder="Your name" />
-          </label>
-          <label class="input-container __card">
-            <span class="input-label">Number of card</span>
-            <input type="text" class="input" placeholder="XXXX XXXX XXXX XXXX" />
-            <span class="input-label-icon">
-              <img src="../images/visa.svg" alt="Visa" />
-            </span>
-          </label>
-          <div class="input-container-box">
+          <form id="payment-form">
+            <h4 class="title-4">Payment Information</h4>
+            <p>We will reserve your first month’s bill on your credit card upon checkout. However you will <a
+              href="#">not be billed</a> if your physician does not approve you for the programme. Recurring monthly billing will start from the date your medication has been sent, and can be turned off any time in your account settings.</p>
+            <div class="consultation-box-image">
+              <img src="../images/payments.png" alt="" />
+            </div>
+<!--            <label class="input-container __payment" data-currency="$">-->
+<!--              <span class="input-label">Payment  amount</span>-->
+<!--              <input type="number" class="input" value="100.00" readonly />-->
+<!--              <button class="btn btn-edit" id="toggle-value">Edit</button>-->
+<!--            </label>-->
+<!--            <label class="input-container">-->
+<!--              <span class="input-label">Name on card</span>-->
+<!--              <input type="text" class="input" placeholder="Your name" />-->
+<!--            </label>-->
+            <div class="input-container __select">
+              <select class="input" name="plan"><!--Supplement an id here instead of using 'name'-->
+                <option value="421">For a small push in the right direction - 70$ / Month</option>
+                <option value="420">For a full package tailored to your needs - 200$ / Month</option>
+                <option value="414">For extra help with diet and exercise - 100$ / Month</option>
+              </select>
+            </div>
             <label class="input-container">
-              <span class="input-label">Expiry date</span>
-              <input type="text" class="input" placeholder="XX/XX" />
+              <span class="input-label">Name</span>
+              <input type="text" class="input" name="name" placeholder="Your name" value="">
+              <input type="hidden" name="customer" value="">
             </label>
             <label class="input-container">
-              <span class="input-label">Security code</span>
-              <input type="text" class="input" placeholder="XXX" />
+              <span class="input-label">Email</span>
+              <input type="email" class="input" name="email" placeholder="" value="">
+            </label>
+<!--            <label class="input-container __card">-->
+<!--              <span class="input-label">Number of card</span>-->
+<!--              <input type="text" class="input" placeholder="XXXX XXXX XXXX XXXX" />-->
+<!--              <span class="input-label-icon">-->
+<!--                <img src="../images/visa.svg" alt="Visa" />-->
+<!--              </span>-->
+<!--            </label>-->
+            <div class="input-container-box">
+              <label class="input-container">
+                <span class="input-label">Expiry date</span>
+                <input type="text" class="input" placeholder="XX/XX" />
+              </label>
+              <label class="input-container">
+                <span class="input-label">Security code</span>
+                <input type="text" class="input" placeholder="XXX" />
+                <span class="input-help">
+                  ?
+                  <span class="input-help-info">This is secure code</span>
+                </span>
+              </label>
+            </div>
+            <label class="input-container">
+              <span class="input-label">ZIP / Postal code</span>
+              <input type="text" class="input" placeholder="XXXXX" />
               <span class="input-help">
-                ?
-                <span class="input-help-info">This is secure code</span>
-              </span>
+                  ?
+                  <span class="input-help-info">For example 90120</span>
+                </span>
             </label>
-          </div>
-          <label class="input-container">
-            <span class="input-label">ZIP / Postal code</span>
-            <input type="text" class="input" placeholder="XXXXX" />
-            <span class="input-help">
-                ?
-                <span class="input-help-info">For example 90120</span>
-              </span>
-          </label>
-          <div class="consultation-box-action">
-            <a href="consultation-step-6.html" class="btn">Confirm</a>
-          </div>
+            <div class="consultation-box-action">
+              <button class="btn">Confirm</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

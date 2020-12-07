@@ -53,19 +53,18 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-        <div class="consultation-box">
+        <form class="consultation-box" id="registration">
           <h4 class="title-4">Account Creation</h4>
           <p>We will send your information to a a trusted physician who will review your eligibility. Please make an account so we can contact you when it’s been reviewed. You can also check the status of your case in your account overview.</p>
           <br>
           <br>
           <label class="input-container">
             <span class="input-label">Email address</span>
-            <input type="text" class="input" placeholder="Email" data-type="email">
-            <span class="input-error">Incorrect data type</span>
+            <input type="text" name="email" class="input" placeholder="Email">
           </label>
           <label class="input-container">
             <span class="input-label">Create password</span>
-            <input type="password" class="input" placeholder="Password">
+            <input type="password" name="password" class="input" placeholder="Password">
           </label>
           <div class="input-container">
             <label class="radio-box-item">
@@ -74,10 +73,13 @@
               <span class="input-radio-title">I Agree to the <a href="#">user terms</a>, <a href="#">service terms</a> and <a href="#">privacy policy</a></span>
             </label>
           </div>
-          <div class="consultation-box-action">
-            <a href="consultation-step-3.html" class="btn disabled">Next</a>
+          <div class="input-container-message">
+            <p>A user with such email already exists!</p>
           </div>
-        </div>
+          <div class="consultation-box-action">
+            <button class="btn disabled">Next</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

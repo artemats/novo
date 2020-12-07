@@ -114,6 +114,35 @@ $(document).ready(function () {
         tabBtn.addClass('is-active');
     });
 
+    // Clear checkboxes values on "none" click //
+    $('input[value="None"]').on('change', function () {
+        const noneCheck = $(this);
+        if(noneCheck.prop('checked')) {
+            noneCheck.closest('.radio-box').find('.input-checkbox').not(noneCheck).prop('checked', false);
+        }
+    });
+    // Clear none check on checked other //
+    $('input[type="checkbox"]').not($('input[value="None"]')).on('change', function () {
+        $(this).closest('.input-container').find('input[value="None"]').prop('checked', false);
+    });
+
+    // Detect agree checkboxes
+    $('.check-agree').on('change', function () {
+        let agree = false;
+        const btn = $(this).closest('form').find('.btn');
+        $(this).closest('form').find('.check-agree:checked').each(function (i) {
+            i >= 1 ? agree = true : agree = false;
+        });
+
+        agree ? btn.removeClass('disabled') : btn.addClass('disabled');
+    });
+
+    // Detect detect details for doctor //
+    $('[name="docagree"]').on('change', function () {
+        const textArea = $('[name="docInfo"]');
+        parseInt($(this).val()) === 1 ? textArea.prop('disabled', false) : textArea.prop('disabled', true);
+    });
+
     setIdenticalHeight($('.result-box'));
 
 });

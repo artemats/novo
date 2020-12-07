@@ -59,7 +59,7 @@
                 <a href="pricing.html" class="link">Pricing</a>
               </li>
               <li>
-                <a href="#login" class="link open-popup">Login</a>
+                <a href="#login-popup" class="link open-popup">Login</a>
               </li>
               <li>
                 <a href="consultation-step-1.html" class="btn btn-border btn-sm">Start consultation</a>
@@ -374,22 +374,25 @@
   </div>
 </footer>
 
-<div class="popup" id="login">
+<div class="popup" id="login-popup">
   <div class="popup-box">
     <div class="popup-box-title">
       <h4 class="title-4">Sign In</h4>
     </div>
-    <form>
+    <form id="login">
       <label class="input-container">
         <span class="input-label">E-mail</span>
-        <input type="email" class="input" placeholder="E-mail">
+        <input type="email" name="email" class="input" placeholder="E-mail">
       </label>
       <label class="input-container">
         <span class="input-label">Password</span>
-        <input type="password" class="input" placeholder="Password">
+        <input type="password" name="password" class="input" placeholder="Password">
       </label>
+      <div class="input-container-message">
+        <p>A user with such email already exists!</p>
+      </div>
       <div class="popup-box-action">
-        <button class="btn open-popup">Login</button>
+        <button class="btn">Login</button>
       </div>
       <div class="popup-box-detail">
         <p>Don't have account? <a href="#registration" class="open-popup">Sign Up</a></p>
@@ -403,29 +406,32 @@
     <div class="popup-box-title">
       <h4 class="title-4">Sign Up</h4>
     </div>
-    <form>
+    <form id="popup-registration">
       <label class="input-container">
         <span class="input-label">Name</span>
-        <input type="text" class="input" placeholder="Name">
+        <input type="text" name="name" class="input" placeholder="Name">
       </label>
       <label class="input-container">
         <span class="input-label">E-mail</span>
-        <input type="email" class="input" placeholder="E-mail">
+        <input type="email" name="email" class="input" placeholder="E-mail">
       </label>
       <label class="input-container">
         <span class="input-label">Telephone</span>
-        <input type="tel" class="input" placeholder="Telephone">
+        <input type="tel" name="phone" class="input" placeholder="Telephone">
       </label>
       <label class="input-container">
         <span class="input-label">Password</span>
-        <input type="password" class="input" placeholder="Password">
+        <input type="password" name="password" id="password" class="input" placeholder="Password">
       </label>
       <label class="input-container">
         <span class="input-label">Confirm password</span>
-        <input type="password" class="input" placeholder="Password">
+        <input type="password" name="password_confirm" class="input" placeholder="Password">
       </label>
+      <div class="input-container-message">
+        <p>A user with such email already exists!</p>
+      </div>
       <div class="popup-box-action">
-        <button class="btn open-popup">Sign Up</button>
+        <button class="btn">Sign Up</button>
       </div>
       <div class="popup-box-detail">
         <p>Already have account? <a href="#login" class="open-popup">Sign In</a></p>
@@ -445,6 +451,37 @@
     <div class="popup-box-action">
       <button class="btn close-popup">Close</button>
     </div>
+  </div>
+</div>
+
+<div class="popup" id="order-popup">
+  <div class="popup-box">
+    <div class="popup-box-title">
+      <h4 class="title-4">Order a product</h4>
+    </div>
+    <div class="popup-box-description">
+      <p>Leave your contact details, our manager will call you back</p>
+    </div>
+    <form id="order">
+      <label class="input-container">
+        <span class="input-label">Name</span>
+        <input type="text" name="name" class="input" placeholder="Your name">
+      </label>
+      <label class="input-container">
+        <span class="input-label">E-mail</span>
+        <input type="email" name="email" class="input" placeholder="E-mail">
+      </label>
+      <label class="input-container">
+        <span class="input-label">Telephone</span>
+        <input type="tel" name="phone" class="input" placeholder="Telephone">
+      </label>
+      <div class="input-container-message">
+        <p>A user with such email already exists!</p>
+      </div>
+      <div class="popup-box-action">
+        <button class="btn">Leave contact</button>
+      </div>
+    </form>
   </div>
 </div>
 </div>
