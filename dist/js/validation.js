@@ -44,6 +44,11 @@ step2Form.on('submit', function (event) {
 });
 
 /*
+Step 4
+До інпутів які тоглять кнопку потрібно добавити класс check-agree https://prnt.sc/vy0oj1
+ */
+
+/*
 Step 5
 Потрібно select https://prnt.sc/vxkiif огорнути в блок <div class="input-container __select"></div> https://prnt.sc/vxkj9u
  */
