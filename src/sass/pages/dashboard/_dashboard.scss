@@ -45,7 +45,7 @@
           letter-spacing: .05em;
         }
         &-container{
-          padding-bottom: 20px;
+          padding-bottom: 30px;
         }
     }
     .pricing{
@@ -149,5 +149,35 @@
                 }
             }
         }
+    }
+}
+
+#user-data{
+  .input{
+    opacity: .7;
+  }
+  &.editable{
+    .input{
+      opacity: 1;
+    }
+  }
+}
+
+.toggle{
+  &-edit{
+    &-save{
+      display: none;
+    }
+  }
+}
+
+.editable{
+    .toggle{
+      &-edit{
+        display: none;
+        &-save{
+          display: inline-block;
+        }
+      }
     }
 }

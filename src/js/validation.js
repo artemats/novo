@@ -22,10 +22,10 @@ step1Form.validate({
     }
 });
 
-step1Form.on('submit', function (event) {
-    event.preventDefault();
-    console.log(step1Form.valid());
-});
+// step1Form.on('submit', function (event) {
+//     event.preventDefault();
+//     console.log(step1Form.valid());
+// });
 
 /*
 Step 2
@@ -34,14 +34,17 @@ const step2Form = $('#registration');
 step2Form.validate({
     rules: {
         email: 'required',
-        password: 'required',
+        password: {
+            required: true,
+            minlength: 6,
+        },
     }
 });
 
-step2Form.on('submit', function (event) {
-    event.preventDefault();
-    console.log(step2Form.valid());
-});
+// step2Form.on('submit', function (event) {
+//     event.preventDefault();
+//     console.log(step2Form.valid());
+// });
 
 /*
 Step 4
@@ -63,10 +66,10 @@ step5Form.validate({
     }
 });
 
-step5Form.on('submit', function (event) {
-    event.preventDefault();
-    console.log(step5Form.valid());
-});
+// step5Form.on('submit', function (event) {
+//     event.preventDefault();
+//     console.log(step5Form.valid());
+// });
 
 /*
 Login
@@ -78,14 +81,17 @@ loginForm.validate({
             required: true,
             email: true,
         },
-        password: 'required'
+        password: {
+            required: true,
+            minlength: 6
+        }
     }
 });
 
-loginForm.on('submit', function (event) {
-    event.preventDefault();
-    console.log(loginForm.valid());
-});
+// loginForm.on('submit', function (event) {
+//     event.preventDefault();
+//     console.log(loginForm.valid());
+// });
 
 /*
 Registration
@@ -105,7 +111,10 @@ regFrom.validate({
             minlength: 10,
             maxlength: 10
         },
-        password: 'required',
+        password: {
+            required: true,
+            minlength: 6,
+        },
         password_confirm: {
             equalTo: '#password'
         }
@@ -140,4 +149,36 @@ orderForm.validate({
 orderForm.on('submit', function (event) {
     event.preventDefault();
     console.log(orderForm.valid());
+});
+
+/*
+Dashboard, user data
+ */
+const userDataForm = $('#user-data');
+userDataForm.validate({
+    rules: {
+        name: 'required',
+        birthday: 'required',
+        sex: 'required',
+        height: 'required',
+        weight: 'required',
+        status: 'required',
+        reasons: 'required',
+        email: {
+            required: true,
+            email: true
+        },
+        password: {
+            required: true,
+            minlength: 6
+        }
+    }
+});
+
+userDataForm.on('submit', function (event) {
+    event.preventDefault();
+    console.log(userDataForm.valid());
+    if(userDataForm.valid()) {
+        setReadonlyForm(userDataForm);
+    }
 });

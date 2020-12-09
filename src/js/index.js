@@ -143,6 +143,14 @@ $(document).ready(function () {
         parseInt($(this).val()) === 1 ? textArea.prop('disabled', false) : textArea.prop('disabled', true);
     });
 
+    // Toggle editable form //
+    $(document).on('click', '.toggle-edit', function (event) {
+        event.preventDefault();
+        const form = $(this).closest('form');
+        form.addClass('editable');
+        form.find('input').prop('readonly', false);
+    });
+
     setIdenticalHeight($('.result-box'));
 
 });
@@ -241,4 +249,9 @@ const scrollToActiveLink = () => {
 
     $('.consultation-nav-list').scrollLeft(prevWidth);
 
+};
+
+const setReadonlyForm = (form) => {
+    form.find('input').prop('readonly', false);
+    form.removeClass('editable');
 };
